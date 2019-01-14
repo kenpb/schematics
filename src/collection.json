@@ -1,0 +1,21 @@
+{
+  "extends": ["@schematics/angular"],
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "application": {
+      "description": "Create a new Angular application with @kenpb defaults.",
+      "factory": "./application",
+      "schema": "./application/schema.json"
+    },
+    "workspace": {
+      "description": "Create a new Angular workspace with @kenpb defaults.",
+      "factory": "./workspace",
+      "schema": "./workspace/schema.json"
+    },
+    "ng-new": {
+      "description": "Create a new Angular project with @kenpb defaults.",
+      "factory": "./ng-new",
+      "schema": "./ng-new/schema.json"
+    }
+  }
+}

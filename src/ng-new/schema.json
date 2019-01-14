@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "kenpbNgNew",
+  "title": "Angular Ng New Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the new workspace and initial project.",
+      "type": "string",
+      "format": "html-selector",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the new workspace and initial project?"
+    },
+    "skipInstall": {
+      "description": "When true, does not install dependency packages.",
+      "type": "boolean",
+      "default": false
+    },
+    "version": {
+      "type": "string",
+      "description": "The version of the Angular CLI to use.",
+      "visible": false,
+      "$default": {
+        "$source": "ng-cli-version"
+      }
+    },
+    "routing": {
+      "type": "boolean",
+      "description": "When true, generates a routing module for the initial project.",
+      "default": true
+    },
+    "prefix": {
+      "type": "string",
+      "format": "html-selector",
+      "description": "The prefix to apply to generated selectors for the initial project.",
+      "minLength": 1,
+      "default": "app",
+      "alias": "p"
+    },
+    "style": {
+      "description": "The file extension to use for style files.",
+      "type": "string",
+      "default": "scss"
+    },
+    "material": {
+      "description": "Installs the @angular/material",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "version"
+  ]
+}

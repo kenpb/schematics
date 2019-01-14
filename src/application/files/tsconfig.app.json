@@ -1,0 +1,14 @@
+{
+  "extends": "<%= sourcedir.split('/').map(x => '..').join('/') %>/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "<%= sourcedir.split('/').map(x => '..').join('/') %>/out-tsc/app",
+    "baseUrl": "./",
+    "module": "es2015",
+    "types": []
+  },
+  "exclude": [
+    "setup-jest.ts",
+    "jest-global-mocks.ts",
+    "**/*.spec.ts"
+  ]
+}
