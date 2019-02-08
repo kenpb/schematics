@@ -11,3 +11,8 @@ npm link path/to/repo
 # Create a new app
 ng new -c @kenpb/schematics $app
 ```
+
+# Offtopic: using yarn as default package manager for cli
+```
+ng config -g cli.packageManager yarn
+```
