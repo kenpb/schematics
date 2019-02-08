@@ -3,6 +3,10 @@ src/**/*.js
 src/**/*.js.map
 src/**/*.d.ts
 
+# Js Exceptions
+!commitlint.config.js
+!jest.config.js
+
 # IDEs
 .idea/
 jsconfig.json
