@@ -50,7 +50,7 @@ export default function (options: any): Rule {
             dot: '.',
           }),
           // dasherize just in case
-          move(`${options.name}/${options.sourcedir}/${strings.dasherize(options.name)}`)
+          move(`${options.name}/${options.sourcedir}/app`)
         ])
       ),
     ])(host, context);
