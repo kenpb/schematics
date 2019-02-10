@@ -32,7 +32,6 @@ export default function (options: any): Rule {
     return chain([
       mergeWith(
         apply(url('./files'), [
-          options.routing ? noop() : filter((path) => !path.endsWith('__name__-routing.module.ts')),
           template({
             utils: strings,
             ...options,
@@ -44,6 +43,8 @@ export default function (options: any): Rule {
       mergeWith(
         apply(url('./other-files'), [
           options.material ? noop() : filter((path) => !/material\//.test(path)),
+          options.routing ? noop() : filter((path) => !path.endsWith('__name__-routing.module.ts')),
+          options.routing ? noop() : filter((path) => !/example\//.test(path)),
           template({
             utils: strings,
             ...options,

@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'portal',
+    path: 'example',
     loadChildren: './modules/example/example.module#ExampleModule',
   },
   {
     path: '**',
-    redirectTo: 'portal',
+    redirectTo: 'example',
     pathMatch: 'full',
   }
 ];

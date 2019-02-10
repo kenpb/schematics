@@ -12,11 +12,11 @@ import { <%= utils.classify(name) %>Component } from './<%= name %>.component';
     <%= utils.classify(name) %>Component
   ],
   imports: [
-    BrowserModule<% if (material) { %>,
-    BrowserAnimationsModule,
-    MaterialModule<% } %><% if (routing) { %>,
+    BrowserModule,<% if (material) { %>
+    BrowserAnimationsModule,<% } %>
     // https://github.com/angular/flex-layout/issues/846
-    FlexLayoutModule.withConfig({ addFlexToParent: false }, DEFAULT_BREAKPOINTS),
+    FlexLayoutModule.withConfig({ addFlexToParent: false }, DEFAULT_BREAKPOINTS)<% if (material) { %>,
+    MaterialModule<% } %><% if (routing) { %>,
     <%= utils.classify(name) %>RoutingModule<% } %>
   ],
   providers: [],
